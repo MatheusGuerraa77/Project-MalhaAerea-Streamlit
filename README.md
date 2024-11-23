@@ -1,2 +1,73 @@
-# Project-MalhaAerea-Streamlit
- # ✈️ **Malha de Transporte Aéreo: Otimização de Rotas Aéreas**  ## **📋 Descrição Geral** Este projeto foi desenvolvido com o objetivo de **modelar e otimizar a malha de transporte aéreo**, utilizando a teoria dos grafos para representar:   - **Aeroportos**: nós do grafo.   - **Rotas aéreas**: arestas ponderadas com base em critérios como distância, tempo de voo, custo ou consumo de combustível.    O modelo permite **análises estruturadas** da malha aérea, oferecendo soluções escaláveis e práticas para problemas reais.  ---  ## **🎯 Objetivos Alcançados** - 🗺️ **Modelagem de Grafos**     Representação dos aeroportos e rotas aéreas como um **grafo ponderado**, baseando-se em métricas ajustáveis para diferentes análises.   - ⚙️ **Algoritmos de Busca**     - **Dijkstra**: Para encontrar a **rota mais curta** entre dois aeroportos.     - **A***: Para determinar a **rota de menor custo**, considerando critérios mais complexos.   - 🔄 **Escalabilidade**     Suporte para grandes conjuntos de aeroportos e rotas, permitindo aplicação em redes extensas e densas.  ---  ## **🔗 Aplicações** ### 🚀 **Planejamento Estratégico** - Identificação de **rotas mais econômicas e eficientes**, contribuindo para a **redução de custos operacionais** em companhias aéreas.    ### 📊 **Gestão de Fluxos Aéreos** - Otimização de **redirecionamentos e atrasos**.   - Planejamento adaptativo para redes aéreas complexas.  ### 📈 **Análises Operacionais** - Ferramenta para tomadas de decisão no planejamento de voos diários, especialmente em rotas densas ou congestionadas.  ---  ## **💻 Tecnologias Utilizadas** - **Python**: Linguagem base para implementação.     - 📦 **NetworkX**: Modelagem e manipulação de grafos.     - 🌍 **Geopy**: Cálculo das distâncias geográficas entre aeroportos.     - 📊 **Matplotlib**: Visualização da malha aérea com gráficos interativos.     - 🌟 **Streamlit**: Interface amigável e interativa para simulação de rotas, permitindo que usuários explorem as opções de otimização.  ---  ## **📌 Destaques Interativos** ### **1️⃣ Interface Visual (Streamlit)**   Uma interface intuitiva e fácil de usar para:   - **Explorar a malha aérea:** Visualização gráfica dos aeroportos e rotas.   - **Simular rotas:** Teste em tempo real dos algoritmos (Dijkstra e A*).    ### **2️⃣ Gráficos e Visualizações**   - **Mapa de rotas:** Representação clara e precisa da malha aérea.   - **Comparação de algoritmos:** Visualizações interativas para comparar custos e distâncias.  ---  ## **🌟 Impacto e Aplicabilidade** Este projeto apresenta um sistema robusto para o planejamento e otimização de rotas aéreas, com aplicações em:   - **Empresas aéreas:** Redução de custos e otimização operacional.   - **Logística de transporte:** Planejamento eficiente de rotas de carga.   - **Academia:** Base para estudos avançados em grafos e transporte aéreo.    ### **🚀 Próximos Passos** - Adicionar **previsão de condições climáticas** na análise das rotas.   - Integrar dados reais de tráfego aéreo para testes em cenários reais.
+# ✈️ **Malha de Transporte Aéreo dos EUA com Dados Reais**  
+
+Este código implementa uma aplicação interativa usando **Python** e **Streamlit** para modelar a malha de transporte aéreo entre aeroportos dos Estados Unidos. A aplicação permite visualizar a rede de conexões entre os aeroportos, calcular a rota mais curta entre dois pontos e estimar o tempo de voo.  
+
+---
+
+## **🛠️ Funcionalidades do Código**  
+
+### **1️⃣ Modelagem da Rede Aérea com Grafos**
+- **Nós (Aeroportos):** Cada aeroporto é representado como um nó no grafo, com suas coordenadas geográficas reais (latitude e longitude).  
+- **Arestas (Rotas Aéreas):** As rotas conectando os aeroportos são modeladas como arestas ponderadas, onde o peso é a **distância geodésica** calculada usando a fórmula de Haversine.  
+
+### **2️⃣ Algoritmo de Busca**
+- Implementação do **algoritmo de menor caminho (Dijkstra)** para encontrar a rota mais curta entre dois aeroportos com base na distância.  
+
+### **3️⃣ Interface Gráfica Interativa**
+- Criação de uma interface em **Streamlit** para:  
+  - Escolher aeroportos de origem e destino.  
+  - Exibir informações detalhadas da rota mais curta, como distância total e tempo médio de voo.  
+  - Visualizar a malha de transporte em um mapa interativo.  
+
+### **4️⃣ Visualização Gráfica**
+- Utilização do **Matplotlib** para renderizar o mapa e a rede aérea:  
+  - **Mapa base:** Uma imagem de fundo que simula a localização geográfica dos aeroportos.  
+  - **Grafo Completo:** Conexões entre todos os aeroportos desenhadas com arestas azuis.  
+  - **Rota Mais Curta:** Destacada em verde no mapa, indicando claramente o trajeto otimizado.  
+  - **Rótulos das Distâncias:** As distâncias entre aeroportos são exibidas diretamente nas arestas do grafo.  
+
+---
+
+## **📊 Tecnologias Utilizadas**
+- **Python:** Linguagem de desenvolvimento.  
+- **Streamlit:** Framework para criar a interface interativa.  
+- **NetworkX:** Biblioteca para modelar e manipular grafos.  
+- **Geopy:** Cálculo da distância geodésica entre coordenadas.  
+- **Matplotlib:** Renderização do grafo e mapa.  
+- **Pillow (PIL):** Manipulação de imagens para exibir o mapa base.  
+
+---
+
+## **🎯 Funcionalidade Principal**
+### **Cálculo da Rota Mais Curta**
+1. **Seleção dos Aeroportos:**  
+   A partir da barra lateral, o usuário escolhe os aeroportos de origem e destino.  
+2. **Resultado Detalhado:**  
+   - **Rota mais curta:** Exibição da sequência de aeroportos no caminho.  
+   - **Distância total:** Em quilômetros.  
+   - **Tempo médio de voo:** Com base na velocidade média de 850 km/h.  
+3. **Visualização:**  
+   O mapa exibe a rota mais curta destacada em verde, com os pesos das arestas visíveis.  
+
+---
+
+## **📌 Fluxo do Código**
+1. **Definição dos Dados:**  
+   - Coordenadas reais dos aeroportos e rotas aéreas conectando-os.  
+2. **Cálculo das Distâncias:**  
+   Uso da fórmula de Haversine para calcular o peso das arestas (distância geográfica).  
+3. **Modelagem do Grafo:**  
+   Construção do grafo utilizando a biblioteca NetworkX.  
+4. **Interface do Usuário:**  
+   - Streamlit apresenta opções para selecionar os aeroportos e exibe os resultados.  
+5. **Visualização no Mapa:**  
+   - Renderização do grafo sobreposto a um mapa geográfico.
+
+---
+
+## **💡 O que Este Código Oferece?**
+- **Educação:** Excelente exemplo para demonstrar a aplicação de grafos em problemas reais.  
+- **Planejamento:** Pode ser adaptado para redes logísticas e transporte.  
+- **Interatividade:** Interface moderna e fácil de usar para simulações.  
+
+**🚀 Experimente usar diferentes aeroportos para explorar rotas otimizadas!**  
