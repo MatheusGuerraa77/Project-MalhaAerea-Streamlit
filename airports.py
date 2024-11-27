@@ -22,6 +22,9 @@ airports_project = {
     "San Francisco (SFO)": (37.6213, -122.3790),
     "Las Vegas (LAS)": (36.0840, -115.1537),
     "Denver (DEN)": (39.8561, -104.6737),
+    "New York (JFK)": (40.6413, -73.7781), 
+    "Orlando (MCO)": (28.4312, -81.3081),  
+    "Chicago (ORD)": (41.9742, -87.9073),  
 }
 
 # Definição das rotas e cálculo dos pesos (distância entre os aeroportos)
@@ -30,6 +33,10 @@ routes_project = [
     ("San Francisco (SFO)", "Las Vegas (LAS)"),
     ("Las Vegas (LAS)", "Denver (DEN)"),
     ("Seattle (SEA)", "Denver (DEN)"),
+    ("New York (JFK)", "Chicago (ORD)"),      
+    ("New York (JFK)", "Orlando (MCO)"),     
+    ("Chicago (ORD)", "Denver (DEN)"),        
+    ("Orlando (MCO)", "Las Vegas (LAS)"),     
 ]
 
 # Criar o grafo
@@ -49,7 +56,11 @@ pos_project = {
     "San Francisco (SFO)": (85, 690),
     "Las Vegas (LAS)": (325, 570),
     "Denver (DEN)": (710, 680),
+    "New York (JFK)": (1760, 800),  
+    "Orlando (MCO)": (1610, 220),  
+    "Chicago (ORD)": (1280,780),  
 }
+
 
 # Implementação para encontrar a rota mais curta entre todos os pares
 def find_shortest_path(graph, source, target):
