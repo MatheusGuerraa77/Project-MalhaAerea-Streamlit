@@ -1,6 +1,6 @@
 # ✈️ **Malha de Transporte Aéreo dos EUA com Dados Reais**  
 
-Este código implementa uma aplicação interativa usando **Python** e **Streamlit** para modelar a malha de transporte aéreo entre aeroportos dos Estados Unidos. A aplicação permite visualizar a rede de conexões entre os aeroportos com base em dados geográficos reais, além de calcular a rota mais curta entre dois pontos e estimar o tempo de voo.  
+Este código implementa uma aplicação interativa usando **Python** e **Streamlit** para modelar a malha de transporte aéreo entre aeroportos dos Estados Unidos. A aplicação permite visualizar a rede de conexões entre os aeroportos com base em dados geográficos reais, além de calcular a rota mais curta entre dois pontos e estimar o tempo de voo do aeroporto de origem até o aeroporto de destindo.  
 
 ---
 
