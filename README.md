@@ -50,10 +50,7 @@ Este código implementa uma aplicação interativa usando **Python** e **Streaml
 
 1. **Mapa com Conexões**:  
    - **Nós (aeroportos)**: Representados por círculos vermelhos.  
-   - **Arestas (rotas)**: Linhas azuis para conexões gerais e verdes para a rota mais curta.
-
-2. **Labels**:  
-   Distâncias exibidas em cada aresta (em km).  
+   - **Arestas (rotas)**: Linhas azuis para conexões gerais e verdes para a rota mais curta.  
 
 ---
 
