@@ -16,6 +16,7 @@ def calculate_distance(coord1, coord2):
     distance = 2 * R * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return distance
 
+
 # Aeroportos e suas coordenadas geográficas reais (latitude, longitude)
 airports_project = {
     "Seattle (SEA)": (47.4502, -122.3088),
